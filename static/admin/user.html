@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chorme=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>账号设置</title>
+<link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+<link rel="bookmark" type="image/x-icon" href="../img/favicon.ico" />
+
+<!-- Bootstrap 3.3.7 -->
+<link href="../plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!-- iconfont -->
+<link href="../plugins/iconfont/iconfont.css" rel="stylesheet" type="text/css" /> 
+<!-- animate css -->
+<link href="../css/animate.css" rel="stylesheet" type="text/css" />
+<!-- base css -->
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<!-- master css -->
+<link href="../css/layout.css" rel="stylesheet" type="text/css" />
+<!-- custom css-->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<!-- dialog custom css -->
+<link href="../css/dialog/dialog.custom.css" rel="stylesheet" type="text/css" />
+
+<!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrapper">
+	<nav class="navbar navbar-static-top" role="navigation">
+		<div class="logo fl">
+			<img src="../img/logo.png" />
+		</div>
+		<a class="navbar-minimalize" href="javascript:;">
+            <i class="iconfont icon-bars"></i>
+        </a>
+        <div class="bullhornBox oh fl">
+        	<div class="tit fl mr5"><i class="iconfont icon-bullhorn fl mr5"></i>系统公告：</div>
+        	<div class="bullhornMarquee oh">
+				<ul class="infoList">
+					<li><a href="javascript:;">广新集团上传了最新报表，版本号为2017-8</a></li>
+					<li><a href="javascript:;">广新集团上传了最新报表，版本号为2017-6</a></li>
+				</ul>
+			</div>
+        </div>
+		<ul class="nav navbar-top-links fr">
+			<li><i class="iconfont icon-user"></i><span>欢迎你!</span><a class="username font-orange fb" href="javascript:;">超级管理员</a></li>
+			<li>
+				<a class="iconfont icon-gear" title="设置" href="javascript:;"></a>
+				<ul class="dropdown-setUp pa">
+					<li><a href="javascript:;">修改密码</a></li>
+					<li><a href="javascript:;">修改资料</a></li>
+				</ul>
+			</li>
+			<li><a class="iconfont icon-loginout" title="退出" href="../login/login.html"></a></li>
+		</ul>
+	</nav>
+	<!--Left Menu Start -->
+	<nav class="navbar-static-side" role="navigation">
+		<ul class="nav side-menu" id="side-menu">
+            <li><a href="../admin/desktop.html">工作台</a></li>
+            <li><a href="../admin/upload.html">久其报表</a></li>
+            <li><a href="../admin/modal.html">模板设置</a></li>
+            <li class="active"><a href="../admin/user.html">下属账户</a></li>
+            <li><a href="../admin/company.html">企业设置</a></li>
+        </ul>
+	</nav>
+	<!--Left Menu End -->
+	<!--Right Content Start -->
+	<div class="content-wrapper">
+		<ol class="breadcrumb">
+			<li><i class="iconfont icon-map mr5"></i>您现在所在的位置是：国资上报系统</li>
+			<li class="active">账号设置</li>
+		</ol>
+		<section class="main-content">
+			<div class="content animated fadeInRight">
+			<!-- Content Start-->
+				<div class="section">
+					<div class="section-top oh">
+						<h1 class="fl mr30">账号设置</h1>
+						<div class="toolbar fr">
+							<a class="btn btn-default" onclick="addUser()">新增账号</a>
+						</div>
+					</div>
+					<div class="spaceline20"></div>
+					<div class="sectionMain">
+						<table class="table table-striped table-bordered table-hover">
+							<thead>
+								<tr>
+									<th width="45">序号</th>
+									<th>账号名称</th>
+									<th>职能企业</th>
+									<th width="160">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tc">1</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">2</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">3</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">4</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">5</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">6</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">7</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">8</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">9</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">10</td>
+									<td>张三</td>
+									<td>广业集团；广晟集团；广业集团；广晟集团</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pageToolbar oh mt15">
+							<ul class="total fl">
+								<li>共<em>5</em>条记录，每页显示</li>
+								<li>
+									<select>
+										<option>5</option>
+										<option>10</option>
+										<option>15</option>
+									</select>
+								</li>
+								<li>条</li>
+							</ul>
+							<ul class="form fr">
+								<li>跳转到</li>
+								<li><input type="text"></li>
+								<li>页</li>
+								<li><button class="btn" type="button">GO</button></li>
+							</ul>
+							<div class="pagination-tc tc oh">
+								<ul class="pagination">
+								    <li class="disabled"><a href="javascript:;"><i class="iconfont icon-angle-left"></i></a></li>
+								    <li class="active"><a href="javascript:;">1</a></li>
+								    <li><a href="javascript:;">2</a></li>
+								    <li><a href="javascript:;">3</a></li>
+								    <li><a href="javascript:;"><i class="iconfont icon-angle-right"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Content End -->
+			</div>
+		</section>
+	</div>
+	<footer class="footer tr">
+		 版权所有：广东省人民政府国有资产监督管理委员会　　技术支持：广东广业开元科技有限公司
+	</footer>
+	<!--Right Content End -->
+</div>
+<!-- dialog -->
+<div id="editCompanyType-dialog" class="none">
+	<div class="dialogBox">
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">企业类型：</div>
+			<div class="filterType oh">
+				<ul class="typeList">
+					<li>
+						<span>竞争性</span>
+						<a class="iconfont icon-delete font-red ml5" href="javascript:;" title="删除"></a>
+					</li>
+					<li>
+						<span>竞争性</span>
+						<a class="iconfont icon-delete font-red ml5" href="javascript:;" title="删除"></a>
+					</li>
+					<li class="addType">
+						<a class="iconfont icon-plus" href="javascript:;" title="添加"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">类型标题：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+	</div>
+</div><!-- /addExportModel dialog-->
+<div id="addCompanyType-dialog" class="none">
+	<div class="dialogBox">
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">企业名称：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">企业类型：</div>
+			<div class="filterType oh">
+				<select class="form-control">
+					<option>公共性</option>
+				</select>
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">操作年份：</div>
+			<div class="filterType oh">
+				<select class="form-control">
+					<option>2017</option>
+				</select>
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">应用模板：</div>
+			<div class="filterType oh">
+				<div class="checkbox-group">
+					<label><input type="checkbox" />2015-竞争性企业-效益表</label>
+					<label><input type="checkbox" />2015-竞争性企业-效益表</label>
+					<label><input type="checkbox" />2015-竞争性企业-效益表</label>
+					<label><input type="checkbox" />2015-竞争性企业-效益表</label>
+					<label><input type="checkbox" />2015-竞争性企业-效益表</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /addCompanyType dialog-->
+<!-- dialog -->
+<div id="addUser-dialog" class="none">
+	<div class="dialogBox">
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">姓　名：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">密　码：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">职　能：</div>
+			<div class="filterType oh">
+				<div class="row row-sm-margin checkbox-group">
+					<div class="col-xs-4">
+						<label><input type="checkbox" />广业集团</label>
+					</div>
+					<div class="col-xs-4">
+						<label><input type="checkbox" />广业集团</label>
+					</div>
+					<div class="col-xs-4">
+						<label><input type="checkbox" />广业集团</label>
+					</div>
+					<div class="col-xs-4">
+						<label><input type="checkbox" />广业集团</label>
+					</div>
+					<div class="col-xs-4">
+						<label><input type="checkbox" />广业集团</label>
+					</div>
+					<div class="col-xs-4">
+						<label><input type="checkbox" />广业集团</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /addExportModel dialog-->
+
+<!-- JQuery 1.11.3 -->
+<script src="../plugins/jquery/jquery-1.11.3.min.js"></script>
+<!--[if lt IE 9]>
+<script src="../plugins/jquery/jquery.pseudo.js"></script>
+<![endif]-->
+<!-- Bootstrap 3.3.7 -->
+<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<!-- bootstrap-prettyfile -->
+<script src="../plugins/prettyfile/bootstrap-prettyfile.js"></script>
+<!-- layer v2.0 -->
+<script src="../plugins/layer/layer.js"></script> 
+<!-- jquery.SuperSlide.2.1 -->
+<script src="../plugins/jquery.SuperSlide/jquery.SuperSlide.2.1.js"></script>
+<!-- custom -->
+<script src="../js/normal.custom.js"></script>
+<script>
+	function addUser(){
+		layer.open({
+			type: 1,
+			title: '新增账号',
+			area: '450px',
+			btn: ['保存','取消'],
+			shadeClose: true,
+			content: $('#addUser-dialog')
+		});
+	}
+</script>
+</body>
+</html>

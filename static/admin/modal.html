@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chorme=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>模板设置</title>
+<link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+<link rel="bookmark" type="image/x-icon" href="../img/favicon.ico" />
+
+<!-- Bootstrap 3.3.7 -->
+<link href="../plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!-- iconfont -->
+<link href="../plugins/iconfont/iconfont.css" rel="stylesheet" type="text/css" /> 
+<!-- animate css -->
+<link href="../css/animate.css" rel="stylesheet" type="text/css" />
+<!-- base css -->
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<!-- master css -->
+<link href="../css/layout.css" rel="stylesheet" type="text/css" />
+<!-- custom css-->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<!-- dialog custom css -->
+<link href="../css/dialog/dialog.custom.css" rel="stylesheet" type="text/css" />
+
+<!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrapper">
+	<nav class="navbar navbar-static-top" role="navigation">
+		<div class="logo fl">
+			<img src="../img/logo.png" />
+		</div>
+		<a class="navbar-minimalize" href="javascript:;">
+            <i class="iconfont icon-bars"></i>
+        </a>
+        <div class="bullhornBox oh fl">
+        	<div class="tit fl mr5"><i class="iconfont icon-bullhorn fl mr5"></i>系统公告：</div>
+        	<div class="bullhornMarquee oh">
+				<ul class="infoList">
+					<li><a href="javascript:;">广新集团上传了最新报表，版本号为2017-8</a></li>
+					<li><a href="javascript:;">广新集团上传了最新报表，版本号为2017-6</a></li>
+				</ul>
+			</div>
+        </div>
+		<ul class="nav navbar-top-links fr">
+			<li><i class="iconfont icon-user"></i><span>欢迎你!</span><a class="username font-orange fb" href="javascript:;">超级管理员</a></li>
+			<li>
+				<a class="iconfont icon-gear" title="设置" href="javascript:;"></a>
+				<ul class="dropdown-setUp pa">
+					<li><a href="javascript:;">修改密码</a></li>
+					<li><a href="javascript:;">修改资料</a></li>
+				</ul>
+			</li>
+			<li><a class="iconfont icon-loginout" title="退出" href="../login/login.html"></a></li>
+		</ul>
+	</nav>
+	<!--Left Menu Start -->
+	<nav class="navbar-static-side" role="navigation">
+		<ul class="nav side-menu" id="side-menu">
+            <li><a href="../admin/desktop.html">工作台</a></li>
+            <li><a href="../admin/upload.html">久其报表</a></li>
+            <li class="active"><a href="../admin/modal.html">模板设置</a></li>
+            <li><a href="../admin/user.html">下属账户</a></li>
+            <li><a href="../admin/company.html">企业设置</a></li>
+        </ul>
+	</nav>
+	<!--Left Menu End -->
+	<!--Right Content Start -->
+	<div class="content-wrapper">
+		<ol class="breadcrumb">
+			<li><i class="iconfont icon-map mr5"></i>您现在所在的位置是：国资上报系统</li>
+			<li><a href="../admin/desktop.html">工作台</a></li>
+			<li class="active">模板设置</li>
+		</ol>
+		<section class="main-content">
+			<div class="content animated fadeInRight">
+			<!-- Content Start-->
+				<div class="section">
+					<div class="section-top oh">
+						<div class="tit fl mr20">当前使用导出模型：<b>2017考核表</b></div>
+						<div class="toolbar fr">
+							<a class="btn btn-default" onclick="addExportModel()">新建导出模板</a>
+							<a class="btn btn-default" href="modal-export.html">所有模板列表</a>
+						</div>
+						<div class="filterBox oh">
+							<div class="filterTit fl">快速切换：</div>
+							<div class="filterType oh">
+								<select class="form-control fl w150 mr15">
+									<option>2014</option>
+								</select>
+								<select class="form-control fl w150">
+									<option>导出模板A</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="spaceline20"></div>
+					<div class="sectionMain">
+						<div class="toolbar">
+							<a class="btn btn-default btn-gray" onclick="addRule()"><i class="iconfont icon-plus mr5"></i>新增规则</a>
+						</div>
+						<div class="spaceline10"></div>
+						<table class="table table-striped table-bordered table-hover">
+							<thead>
+								<tr>
+									<th width="45">序号</th>
+									<th width="100">表格位置</th>
+									<th>字段名称</th>
+									<th width="80">字段类型</th>
+									<th width="80">必填</th>
+									<th>关联规则</th>
+									<th width="160">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tc">1</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">2</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">3</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">4</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">5</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">6</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">7</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">8</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">9</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tc">10</td>
+									<td class="tc">A3</td>
+									<td>营业收入--基准值</td>
+									<td class="tc">字符</td>
+									<td class="tc">否</td>
+									<td>2017考核表 A10 = 2017EVA表B1</td>
+									<td>
+										<div class="table-toolbar tc">
+		                                    <a href="javascript:;"><i class="iconfont icon-pen mr5"></i>编辑</a>
+		                                    <a class="font-red" href="javascript:;"><i class="iconfont icon-delete mr5"></i>删除</a>
+		                                </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pageToolbar oh mt15">
+							<ul class="total fl">
+								<li>共<em>5</em>条记录，每页显示</li>
+								<li>
+									<select>
+										<option>5</option>
+										<option>10</option>
+										<option>15</option>
+									</select>
+								</li>
+								<li>条</li>
+							</ul>
+							<ul class="form fr">
+								<li>跳转到</li>
+								<li><input type="text"></li>
+								<li>页</li>
+								<li><button class="btn" type="button">GO</button></li>
+							</ul>
+							<div class="pagination-tc tc oh">
+								<ul class="pagination">
+								    <li class="disabled"><a href="javascript:;"><i class="iconfont icon-angle-left"></i></a></li>
+								    <li class="active"><a href="javascript:;">1</a></li>
+								    <li><a href="javascript:;">2</a></li>
+								    <li><a href="javascript:;">3</a></li>
+								    <li><a href="javascript:;"><i class="iconfont icon-angle-right"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Content End -->
+			</div>
+		</section>
+	</div>
+	<footer class="footer tr">
+		 版权所有：广东省人民政府国有资产监督管理委员会　　技术支持：广东广业开元科技有限公司
+	</footer>
+	<!--Right Content End -->
+</div>
+<!-- dialog -->
+<div id="addExportModel-dialog" class="none">
+	<div class="dialogBox">
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">模型名称：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">适用年份：</div>
+			<div class="filterType oh">
+				<select class="form-control w100">
+					<option>2017</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div><!-- /addExportModel dialog-->
+<div id="addRule-dialog" class="none">
+	<div class="dialogBox addRule-dialog">
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">表格位置：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">字段名称：</div>
+			<div class="filterType oh">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">数据类型：</div>
+			<div class="filterType oh">
+				<select class="form-control">
+					<option>字符</option>
+				</select>
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">是否必填：</div>
+			<div class="filterType oh">
+				<div class="checkbox-group">
+					<label><input type="checkbox" /></label>
+				</div>
+			</div>
+		</div>
+		<div class="filterBox oh">
+			<div class="filterTit fl fb">跨模型关联：</div>
+			<div class="filterType oh">
+				<div class="checkbox-group">
+					<label><input type="checkbox" class="relation" checked="" /></label>
+				</div>
+			</div>
+		</div>
+		<div class="filterBox oh relationBox">
+			<div class="toolbar">
+				<a class="btn btn-default btn-gray" href="javascript:;"><i class="iconfont icon-plus"></i></a>
+				<span class="font-gray ml10">点击增加表关联规则，实现多表关联</span>
+			</div>
+			<div class="spaceline10"></div>
+			<div class="tabBox">
+				<div class="tabHead">
+					<h1 class="fl">规则一：</h1>
+					<a class="btn btn-default fr btn-gray" href="javascript:;">取消</a>
+					<a class="btn btn-default fr" href="javascript:;">保存</a>
+					<ul class="fl">
+						<li>设置运算</li>
+						<li>定位表格</li>
+						<li>设定数值</li>
+					</ul>
+				</div>
+				<div class="tabContent">
+					<div class="tabPane">
+						<div class="operation">
+							<button class="btn btn-default btn-gray">+</button>
+							<button class="btn btn-default btn-gray">-</button>
+							<button class="btn btn-default btn-gray">*</button>
+							<button class="btn btn-default btn-gray">/</button>
+							<button class="btn btn-default btn-gray">=</button>
+						</div>
+					</div>
+					<div class="tabPane">
+						<div class="row">
+							<div class="col-xs-5">
+								<div class="form-group">
+									<select class="form-control">
+										<option>2017考核表A1</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-1 tc">-</div>
+							<div class="col-xs-5">
+								<div class="form-group">
+									<select class="form-control">
+										<option>2017调整表C1</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-1">
+								<button class="btn btn-default fr"><i class="iconfont icon-confirm"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="tabPane">
+						<div class="row">
+							<div class="col-xs-11">
+								<div class="form-group">
+									<input type="number" class="form-control" />
+								</div>
+							</div>
+							<div class="col-xs-1">
+								<button class="btn btn-default fr"><i class="iconfont icon-confirm"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="resultBox">
+					<h1>规则结果</h1>
+					<div class="resultMain">
+						<span class="checked">2017考核表A1<a class="iconfont icon-delete-o pa font-red"></a></span>
+						<span>+<a class="iconfont icon-delete-o pa font-red"></a></span>
+						<span>2017调整表C1<a class="iconfont icon-delete-o pa font-red"></a></span>
+						<span>*<a class="iconfont icon-delete-o pa font-red"></a></span>
+						<span>1.7<a class="iconfont icon-delete-o pa font-red"></a></span>
+						<span>=<a class="iconfont icon-delete-o pa font-red"></a></span>
+						<span>2017调整表E1<a class="iconfont icon-delete-o pa font-red"></a></span>
+					</div>
+				</div>
+			</div>
+			<div class="tabBox">
+				<div class="tabHead">
+					<h1 class="fl">规则二：</h1>
+					<a class="btn btn-default fr btn-gray" href="javascript:;">删除</a>
+					<a class="btn btn-default fr" href="javascript:;">编辑</a>
+				</div>
+				<div class="resultBox">
+					<div class="resultMain">
+						<span>2017考核表A1</span>
+						<span>+</span>
+						<span>2017调整表C1</span>
+						<span>*</span>
+						<span>1.7</span>
+						<span>=</span>
+						<span>2017调整表E1</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /addRule dialog-->
+
+<!-- JQuery 1.11.3 -->
+<script src="../plugins/jquery/jquery-1.11.3.min.js"></script>
+<!--[if lt IE 9]>
+<script src="../plugins/jquery/jquery.pseudo.js"></script>
+<![endif]-->
+<!-- Bootstrap 3.3.7 -->
+<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<!-- bootstrap-prettyfile -->
+<script src="../plugins/prettyfile/bootstrap-prettyfile.js"></script>
+<!-- layer v2.0 -->
+<script src="../plugins/layer/layer.js"></script> 
+<!-- jquery.SuperSlide.2.1 -->
+<script src="../plugins/jquery.SuperSlide/jquery.SuperSlide.2.1.js"></script>
+<!-- custom -->
+<script src="../js/normal.custom.js"></script>
+<script>
+	function addExportModel(){
+		layer.open({
+			type: 1,
+			title: '新增数据导出模型',
+			area: '450px',
+			btn: ['保存','取消'],
+			shadeClose: true,
+			content: $('#addExportModel-dialog')
+		});
+	}
+	function addRule(){
+		layer.open({
+			type: 1,
+			title: '新增规则',
+			area: '580px',
+			btn: ['保存','取消'],
+			shadeClose: true,
+			content: $('#addRule-dialog')
+		});
+	}
+</script>
+</body>
+</html>

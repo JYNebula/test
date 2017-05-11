@@ -1,0 +1,460 @@
+@charset "utf-8";
+/*login*/
+.loginWrapper {
+	height: 100%;
+	background-image: url(img/loginBg.png);
+	background-position: center;
+	background-repeat: repeat-x;
+}
+.loginMain {
+	padding-top: 170px;
+	padding-bottom: 50px;
+}
+.loginBox {
+	position: relative;
+	width: 565px;
+	margin: 0 auto;
+}
+.loginPic {
+	position: absolute;
+	top: 55px;
+	right: 5px;
+	width: 130px;
+	height: 85px;
+}
+.loginPic img {
+	width: 130px;
+	height: 85px;
+}
+.loginContent {
+	border: 1px solid #eee;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 12px 11px 0 rgba(213,206,206,.2);
+}
+.loginTit {
+	padding: 10px 25px;
+	border-bottom: 1px solid #eee;
+}
+.login-group {
+	padding: 30px 45px 0;
+}
+.login-group .login-item + .login-item {
+	margin-top: 18px;
+}
+.login-group .tit {
+	width: 60px;
+	margin-right: 5px;
+	line-height: 34px;
+}
+.login-group .form-control {
+	height: 34px;
+	border-radius: 4px;
+}
+.login-group .code {
+	border-radius: 4px;
+	background-color: #eee7ed;
+}
+.login-submit {
+	position: relative;
+	width: 100%;
+	height: 34px;
+	color: #fff;
+	font-size: 18px;
+	border: 0;
+	background-color: #998dae;
+	border-radius: 4px;
+}
+.login-submit:hover,
+.login-submit:focus {
+	color: #fff;
+	background-color: #7a718b;
+}
+.loginError {
+	clear: both;
+	height: 35px;
+	line-height: 35px;
+}
+.loginFooter {
+	position: fixed;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	font-size: 13px;
+	line-height: 30px;
+	color: #999;
+}
+/*index*/
+.tableTit {
+	height: 30px;
+	line-height: 29px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #b7afc6;
+}
+.tableTit .roll-nav {
+	width: 35px;
+	height: 29px;
+	text-align: center;
+	line-height: 29px;
+}
+.table-fr {
+	max-width: 350px;
+	margin-left: -1px;
+}
+.table-fr .tableTit {
+	background-color: #dadcce;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	border-color: #beb9c6;
+}
+.table-fr .table-bordered > thead > tr > th {
+	background-color: #e9eae0;
+}
+.tableLeft .table-bordered > thead > tr > th {
+	height: 70px;
+}
+.tableLeft .table-bordered {
+	table-layout: fixed;
+}
+.scrollTable {
+	overflow-x: auto;
+}
+.tableBottm .btn {
+	width: 150px;
+	height: 40px;
+	line-height: 38px;
+}
+.tableBottm .btn + .btn {
+	margin-left: 15px;
+}
+.tableBottm button.btn{
+	color: #fff;
+	font-size: 15px;
+	background-color: #998dae;
+    border-color: #7a718b;
+}
+.tableBottm button.btn.btn-gray {
+	color: #666;
+	background-color: #f1f1f1;
+    border-color: #dedede;
+}
+.tableBottm button.btn:hover {
+	opacity: .9;
+}
+/*companyBox*/
+.companyBox .companyName {
+	width: 100%;
+	line-height: 30px;
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.companyPopover {
+	top: -5px;
+	right: -208px;
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #ece5f7;
+	background-color: #fff;
+}
+.companyPopover:before,
+.companyPopover:after {
+	content: "◆";
+	position: absolute;
+	top: 0;
+	width: 20px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-family: simsun;
+}
+.companyPopover:before {
+	left: -10px;
+	color: #ece5f7;
+}
+.companyPopover:after {
+	left: -9px;
+	color: #fff;
+}
+.companyPopover .tit {
+	text-align: left;
+	padding-right: 25px;
+	margin-bottom: 10px;
+	line-height: 22px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+.companyPopover .button a {
+	width: 45%;
+	background-color: #f1f1f1;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    line-height: 28px;
+    padding: 0 15px;
+}
+.companyPopover .button a:first-child {
+	color: #fff;
+    background-color: #998dae;
+    border-color: #7a718b;
+}
+.companyPopover .icon-angle-left {
+	top: 10px;
+	right: 10px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 13px;
+	font-size: 10px;
+	color: #fff;
+	background-color: #998dae;
+	border: 1px solid #9083a6;
+} 
+.companyPopover .button a:hover,
+.companyPopover .icon-angle-left:hover {
+	opacity: .9;
+}
+/*fileBox*/
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+	border-radius: 0;
+}
+.fileBox .file-pretty {
+	width: 600px;
+}
+.fileBox .form-control,
+.fileBox .btn {
+	height: 35px;
+}
+.fileBox .btn {
+	line-height: 33px;
+}
+.btn-upload {
+	color: #fff;
+	background-color: #ad949c;
+	border-color: #90757e;
+}
+.btn-upload:hover {
+	background-color: #90757e;
+}
+/*tab*/
+.uploadTab .nav-tabs {
+	margin-bottom: 20px;
+	border-bottom-color: #eee;
+}
+.uploadTab .nav-tabs > li {
+	position: relative;
+}
+.uploadTab .nav-tabs > li + li {
+	margin-left: 10px;
+}
+.uploadTab .nav-tabs > li.active:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #998dae;
+	z-index: 10;
+}
+.uploadTab .nav-tabs > li > a {
+	position: relative;
+	width: 110px;
+	padding: 2px 0;
+	margin: 0;
+	color: #999;
+	font-size: 15px;
+	line-height: 29px;
+	text-align: center;
+	border-radius: 0;
+	z-index: 1;
+	border-width: 1px;
+	border-color: #eee;
+	border-bottom: 0;
+}
+.uploadTab .nav-tabs > li.active > a {
+	color: #998dae;
+	font-weight: bold;
+	border-bottom: #fff ;
+}
+.uploadTab .nav-tabs > li > a:hover {
+	color: #998dae;
+}
+
+.filterBox .toolbar .btn + .btn {
+	margin-left: 10px;
+	font-size: 14px;
+}
+.relationBox .tabBox {
+	border: 1px solid #eee;
+}
+.tabBox + .tabBox {
+	margin-top: 20px;
+}
+.tabBox .tabHead {
+	height: 35px;
+	padding: 0 5px 0 10px;
+	border-bottom: 1px solid #eee;
+}
+.tabBox .tabHead .btn {
+	height: 25px;
+	margin-top: 5px;
+	padding: 0 8px;
+	line-height: 23px;
+	font-size: 14px;
+}
+.tabBox .tabHead .btn + .btn {
+	margin-right: 5px;
+}
+.tabBox .tabHead h1 {
+	width: 90px;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 32px;
+}
+.tabHead ul > li {
+	position: relative;
+	float: left;
+	padding: 2px 12px;
+	margin: 0;
+	color: #999;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 0;
+	z-index: 1;
+	border: 1px solid #eee;
+	border-bottom: 0;
+	border-top: 0;
+	background-color: #fff;
+	cursor: pointer;
+}
+.tabHead ul > li + li {
+	margin-left: 10px;
+}
+.tabHead ul > li.on:before,
+.tabHead ul > li.on:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+.tabHead ul > li.on:before {
+	top: -1px;
+	height: 3px;
+	background-color: #998dae;
+}
+.tabHead ul > li.on:after {
+	bottom: -1px;
+	height: 1px;
+	background-color: #fff;
+}
+.tabHead ul > li.on {
+	color: #998dae;
+	font-weight: bold;
+}
+.tabHead ul > li:hover {
+	color: #998dae;
+}
+.relationBox .tabContent {
+	padding: 10px;
+}
+.relationBox .tabPane {
+	overflow: hidden;
+}
+.relationBox .tabPane .btn-gray {
+	float: left;
+	padding: 0;
+	width: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+.relationBox .tabPane .btn-gray + .btn-gray {
+	margin-left: 10px;
+}
+.resultBox h1 {
+	padding: 0 10px;
+	line-height: 25px;
+	font-weight: bold;
+	background-color: #eee;
+}
+.resultMain {
+	padding: 10px;
+}
+.tabPane .row {
+	margin: 0;
+}
+.tabPane .col-xs-1,
+.tabPane .col-xs-5,
+.tabPane .col-xs-11 {
+	padding: 0;
+}
+.tabBox .row .btn {
+	padding: 0 6px;
+	font-size: 14px;
+}
+.resultMain {
+	overflow: hidden;
+	margin-left: -10px;
+}
+.resultMain span {
+	position: relative;
+	float: left;
+	min-width: 30px;
+	padding: 0 5px;
+	margin-left: 10px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+.resultMain span.checked {
+	color: #fff;
+	background-color: #94ad9a;
+    border-color: #78957f;
+}
+.resultMain .icon-delete-o {
+	top: -8px;
+	right: -8px;
+	font-size: 12px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transition: all .3s ease 0s;
+	   -moz-transition: all .3s ease 0s;
+	     -o-transition: all .3s ease 0s;
+			transition: all .3s ease 0s;
+}
+.resultMain span:hover .icon-delete-o {
+	color: #e5433b;
+	z-index: 1;
+	opacity: 1;
+}
+/**/
+.sectionMain .section-group + .section-group {
+	padding-top: 5px;
+}
+.sectionMain .section-group > .tit {
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+.sectionMain .companySetup {
+	margin: 0 -15px;
+}
+.sectionMain .companySetup .col-xs-4 {
+    margin-bottom: 10px;
+}
+.not-allowed{
+	cursor: not-allowed;
+}
+.border-solid-light{
+	border: solid 1px #E8E8E8;
+}
